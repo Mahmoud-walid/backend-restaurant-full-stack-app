@@ -2,7 +2,7 @@
   // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
     // File Layout
-    "rootDir": "./src",
+    // "rootDir": "./src",
     "outDir": "./build",
 
     // Environment Settings
@@ -54,6 +54,6 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "netlify/functions"],
   "exclude": ["node_modules", "build"]
 }
