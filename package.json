@@ -21,7 +21,8 @@
     "cron": "^4.3.3",
     "dotenv": "^17.2.1",
     "drizzle-orm": "^0.44.4",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
