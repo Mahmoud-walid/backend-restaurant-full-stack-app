@@ -5,6 +5,6 @@ import router from '../../src/routes/routes';
 const app = express();
 
 app.use(express.json());
-app.use('/api', router);
+app.use('/', router);
 
 export const handler = serverless(app);
