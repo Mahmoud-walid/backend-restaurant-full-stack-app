@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@neondatabase/serverless": "^1.0.1",
+    "@netlify/functions": "^4.2.2",
     "cors": "^2.8.5",
     "cron": "^4.3.3",
     "dotenv": "^17.2.1",
