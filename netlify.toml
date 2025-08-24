@@ -1,14 +1,18 @@
 [build]
-  command  = "npm run build"
-  functions = "netlify/functions"
+  command = "npm run build"
+  functions = "build/functions"
   publish = "build"
 
 [functions]
   node_bundler = "esbuild"
-  external_node_modules = ["express", "serverless‑http"]
+  external_node_modules = ["express", "serverless-http"]
 
 [[redirects]]
-  force = true
   from = "/api/*"
   to = "/.netlify/functions/api/:splat"
   status = 200
+  force = true
+  [redirects.headers]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, PUT, DELETE, OPTIONS"
+    Access-Control-Allow-Headers = "Origin, X-Requested-With, Content-Type, Accept"
