@@ -1,12 +1,15 @@
 import { configDotenv } from 'dotenv';
 configDotenv();
 
+type NodeENV = 'development' | 'production';
+
 export const ENV = {
   ['PORT']: process.env['PORT']!,
   ['DATABASE_URL']: process.env['DATABASE_URL']!,
-  ['NODE_ENV']: process.env['NODE_ENV']!,
+  ['NODE_ENV']: process.env['NODE_ENV']! as NodeENV,
   ['EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY']:
     process.env['EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY']!,
+  ['API_URL']: process.env['API_URL']!,
 };
 
 // Validate required environment variables
