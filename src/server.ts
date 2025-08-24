@@ -1,9 +1,12 @@
 import express from 'express';
 import { ENV } from './config/env';
 import router from './routes/routes';
+// import job from './config/cron';
 
 const app = express();
 const port = ENV.PORT;
+
+// if (ENV.NODE_ENV === 'production') job.start();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
